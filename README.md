@@ -1,4 +1,5 @@
 # Data Rainbow — Dashboard
+<img width="1748" height="791" alt="dashboard-snapshot" src="https://github.com/user-attachments/assets/2400da48-1d3b-49c9-abc2-21f5de04d4c4" />
 
 Jupyter dashboard for exploring the Data Rainbow media dataset on a map. Supported media including audio, video and images, with filtering by type, device, location, date, and media file availability.
 
