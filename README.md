@@ -1,4 +1,4 @@
-# Data Rainbow — Dashboard
+# Interactive Dashboard - Mapping the Data
 
 A data dashboard built with Jupyter Notebook for exploring the media dataset on a map.  
 Supports **audio, video, and images**, with filtering by type, device, location, date, and media file availability.
