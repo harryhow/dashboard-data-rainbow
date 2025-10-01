@@ -1,6 +1,6 @@
 # Static Dashboard (no kernel)
 
-The map below is a static export of the notebook and runs entirely in your browser.
+The dashboard below is a static export of the notebook and runs entirely in your browser.
 
 <div style="position:relative;padding-top:56.25%;height:0;overflow:hidden;border:1px solid #ddd;border-radius:12px;">
   <iframe
