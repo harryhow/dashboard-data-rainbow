@@ -1,0 +1,15 @@
+name: env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas=2.*
+  - plotly=5.*
+  - folium>=0.15
+  - ipykernel
+  - jupyterlab
+  - ipywidgets>=8
+  - ipyleaflet>=0.17
+  - leafmap>=0.33
+  - ipydatetime>=1.2
+  - ipyvuetify>=1.10
