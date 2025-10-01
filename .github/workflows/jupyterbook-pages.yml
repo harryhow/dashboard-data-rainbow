@@ -39,7 +39,6 @@ jobs:
             --ExecutePreprocessor.kernel_name=python3 \
             --ExecutePreprocessor.timeout=1200 \
             --ExecutePreprocessor.allow_errors=True \
-            --ExecutePreprocessor.cwd=. \
             --output /tmp/executed.ipynb
 
       - name: Build the book
