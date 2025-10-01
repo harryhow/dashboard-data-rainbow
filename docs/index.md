@@ -14,7 +14,3 @@ https://mybinder.org/v2/gh/harryhow/dashboard-data-rainbow/HEAD?labpath=docs/das
 )
 
 
-
-
-
-
