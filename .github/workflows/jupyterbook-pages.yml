@@ -19,16 +19,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install Jupyter Book
+
+      - name: Install build deps
         run: |
           python -m pip install --upgrade pip
-          pip install jupyter-book myst-nb
+          pip install jupyter-book myst-nb nbconvert nbclient ipywidgets ipyleaflet leafmap
+
+      # Execute notebook once to produce docs/_static/dashboard_static.html
+      - name: Export static dashboard
+        env:
+          EXPORT_STATIC: "1"
+        run: |
+          mkdir -p docs/_static
+          jupyter nbconvert --to notebook --execute docs/dashboard.ipynb \
+            --ExecutePreprocessor.kernel_name=python3 \
+            --ExecutePreprocessor.timeout=1200 \
+            --ExecutePreprocessor.allow_errors=True \
+            --ExecutePreprocessor.cwd=. \
+            --output /tmp/executed.ipynb
+
       - name: Build the book
         working-directory: docs
         run: jupyter-book build .
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

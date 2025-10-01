@@ -1,4 +1,5 @@
 format: jb-book
 root: index
 chapters:
-  - file: dashboard
+  - file: dashboard          # docs/dashboard.ipynb (live/Binder page)
+  - file: static-dashboard   # docs/static-dashboard.md (static page)
