@@ -3,6 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Rainbow — Static Dashboard</title>
+
+    <!-- Widget & map styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@jupyter-widgets/controls@2.0.0/css/widgets.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<!-- Vuetify (for jupyter-vuetify DatePicker) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.7.2/dist/vuetify.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
+        integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+
+<script>
+  // Tell the HTML widget manager where to fetch 3rd-party widget bundles
+  window.require = window.require || {};
+  require.config({
+    paths: {
+      // ipywidgets 8
+      "@jupyter-widgets/base": "https://cdn.jsdelivr.net/npm/@jupyter-widgets/base@2.0.0/dist/index",
+      "@jupyter-widgets/controls": "https://cdn.jsdelivr.net/npm/@jupyter-widgets/controls@2.0.0/dist/index",
+      // map + events
+      "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet-src",
+      "jupyter-leaflet": "https://cdn.jsdelivr.net/npm/jupyter-leaflet@0.20.0/dist/index",
+      "ipyevents": "https://cdn.jsdelivr.net/npm/ipyevents@2.0.3/dist/index",
+      // vue + vuetify widgets used by your DatePicker
+      "jupyter-vue": "https://cdn.jsdelivr.net/npm/jupyter-vue@1.11.2/dist/index",
+      "jupyter-vuetify": "https://cdn.jsdelivr.net/npm/jupyter-vuetify@1.11.3/dist/index"
+    }
+  });
+</script>
+
+<!-- keep this AFTER the require.config above -->
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.1/dist/embed-amd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
