@@ -4,7 +4,6 @@
 A data dashboard built with Jupyter Notebook for exploring the media dataset on a map.  
 Supports **audio, video, and images**, with filtering by type, device, location, date, and media file availability.
 
-![dashboard-snapshot](https://github.com/user-attachments/assets/2400da48-1d3b-49c9-abc2-21f5de04d4c4)
 
 Choose a demo:
 
