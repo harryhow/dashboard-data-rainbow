@@ -36,6 +36,11 @@
 .jp-OutputArea-output {
   width: 100% !important;
 }
+
+/* remove duplicate leaflet map layer from nbconvert output */
+.jp-OutputArea-output .leaflet-container {
+  display: none !important;
+}
 </style>
 
     <!-- Widget & map styles -->
