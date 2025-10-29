@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Rainbow — Static Dashboard</title>
+    
+<style>
+/* --- Fix Leaflet tiles being stretched by global CSS (e.g., Vuetify/Bootstrap) --- */
+.leaflet-container img.leaflet-tile { 
+  max-width: none !important; 
+}
+/* --- Ensure the map container gets a sane size in static export --- */
+.leaflet-container { 
+  width: 100% !important; 
+  min-height: 70vh !important; 
+}
+/* --- Jupyter widget areas sometimes record huge absolute offsets in static HTML. Reset them. --- */
+.jupyter-widgets, .jupyter-widgets-view, .widget-subarea, .jupyter-widgets-output-area {
+  position: static !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+  top: auto !important;
+}
+</style>
 
     <!-- Widget & map styles -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@jupyter-widgets/controls@2.0.0/css/widgets.css">
